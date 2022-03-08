@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Kontakt | Marino Linić</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="main.css"/>
+	<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css"/>
+	<link rel="shortcut icon" type="image/png" href="slike/favicon.png"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body>
+	<!-- Navigacija -->
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+		<a class="navbar-brand" href="index.html">
+			<img src="slike/ML.svg" alt="Logo slika" style="width: 140px; height: auto;">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responzivno">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="responzivno">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Naslovnica</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="O_meni.html">O meni</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Usluge.html">Usluge</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Galerija.html">Galerija</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<!-- Kontakt forma -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-6">
+				<form method="post" action="#">
+					<div>
+						<label for="ime" class="">Vaše ime (obavezno)</label>
+						<input type="text" name="ime" id="ime">
+					</div>
+					<div>
+						<label for="email" class="">Vaš e-mail (obavezno)</label>
+						<input type="email" name="email" id="email">
+					</div>
+					<div>
+						<label for="predmet" class="">Predmet poruke</label>
+						<input type="text" name="predmet" id="predmet">
+					</div>
+					<div>
+						<label for="poruka" class="">Poruka (obavezno)</label>
+						<textarea class="" rows="5" name="poruka"></textarea>
+					</div>
+					<br>
+					<div class="actions">
+						<input type="submit" value="Pošalji" />
+					</div>
+				</form>
+			</div>
+			<div class="col-md-12 col-lg-6 text-center">
+				<div id="mapa"></div>
+			</div>
+		</div>
+	</div>
+	
+	<br><br>
+	
+	<!-- Društvene mreže -->
+	<div class="container-fluid">
+		<div class="row text-center">
+			<div class="col-md-12 col-lg-6">
+				<h1 class="eznaslov1">Adresa</h1>
+				<p>Ulica Radmile Matejčić 4, 51000 Rijeka</p>
+			</div>
+			<div class="col-md-12 col-lg-6">
+				<h1 class="eznaslov1">Broj Telefona</h1>
+				<p>+385 91 109 1488</p>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-12 social">
+				<a href="https://www.facebook.com/marino.linic"><i class="fab fa-facebook"></i></a>
+				<a href="https://twitter.com/MarinoLinic"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/marino.linic/"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.youtube.com/channel/UC_VLETxZwt9He99CBEMPXXg"><i class="fab fa-youtube"></i></a>
+				<a href="https://vk.com/marino.linic"><i class="fab fa-vk"></i></a>
+				<a href="https://medium.com/@marinolinic"><i class="fab fa-medium"></i></a>
+				<a href="https://www.goodreads.com/user/show/76388574-marino-lini"><i class="fab fa-goodreads"></i></a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid gornjipadding">
+			<div class="row text-center">
+				<div class="col-12">
+					<p class="cdn">Sva prava pridržana | © Marino Linić</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script>
+		function initMap() {
+  		var adresa = {lat: 45.328605, lng: 14.466780};
+  		var map = new google.maps.Map(
+      	document.getElementById('mapa'), {zoom: 16, center: adresa});
+  		var marker = new google.maps.Marker({position: adresa, map: mapa});
+		}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6T8NQyLMCiwfCdymaFwtKDAwQ_TYgmS4&callback=initMap">
+    </script>
+</body>		
+</html>
